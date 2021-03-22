@@ -1,0 +1,67 @@
+###[ Ethernet ]### 
+  dst       = 00:0c:29:6f:60:81
+  src       = 00:50:56:c0:00:08
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 52
+     id        = 62806
+     flags     = DF
+     frag      = 0
+     ttl       = 128
+     proto     = tcp
+     chksum    = 0x2392
+     src       = 192.168.48.1
+     dst       = 192.168.48.137
+     \options   \
+###[ TCP ]### 
+        sport     = 59236
+        dport     = http
+        seq       = 3803090179
+        ack       = 0
+        dataofs   = 8
+        reserved  = 0
+        flags     = S
+        window    = 64240
+        chksum    = 0x3add
+        urgptr    = 0
+        options   = [('MSS', 1460), ('NOP', None), ('WScale', 8), ('NOP', None), ('NOP', None), ('SAckOK', b'')]
+
+
+192.168.48.1
+###[ Ethernet ]### 
+  dst       = 00:50:56:c0:00:08
+  src       = 00:0c:29:6f:60:81
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 52
+     id        = 0
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x58e9
+     src       = 192.168.48.137
+     dst       = 192.168.48.1
+     \options   \
+###[ TCP ]### 
+        sport     = http
+        dport     = 59236
+        seq       = 3080783166
+        ack       = 3803090180
+        dataofs   = 8
+        reserved  = 0
+        flags     = SA
+        window    = 64240
+        chksum    = 0x7ded
+        urgptr    = 0
+        options   = [('MSS', 1460), ('NOP', None), ('NOP', None), ('SAckOK', b''), ('NOP', None), ('WScale', 7)]
+
+
+192.168.48.137
+IP£º2 ARP£º0 ICMP£º0
